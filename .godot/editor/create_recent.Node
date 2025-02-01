@@ -1,0 +1,15 @@
+StateChart
+CollisionShape2D
+Area2D
+Node
+Timer
+ProgressBar
+TileMapLayer
+AnimationPlayer
+Sprite2D
+StaticBody2D
+AudioStreamPlayer
+StatusIndicator
+Control
+CanvasLayer
+CharacterBody2D

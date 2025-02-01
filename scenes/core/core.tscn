@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://duvwsyuxdctsb"]
+
+[ext_resource type="Texture2D" uid="uid://crnsnun52xjkp" path="res://assets/tileset/punyworld-overworld-tileset.png" id="1_yq6ci"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6a4k"]
+atlas = ExtResource("1_yq6ci")
+region = Rect2(80, 416, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq1no"]
+size = Vector2(16, 7)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oui8x"]
+radius = 90.0
+
+[node name="Core" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = SubResource("AtlasTexture_t6a4k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_mq1no")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_oui8x")

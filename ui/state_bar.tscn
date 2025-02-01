@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2g232wvna5sn"]
+
+[ext_resource type="Script" path="res://ui/state_bar.gd" id="1_3rtj8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjm7j"]
+bg_color = Color(0.52549, 0.0117647, 0.0980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1r4m0"]
+bg_color = Color(0, 0.898039, 0.458824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3taea"]
+bg_color = Color(0.4316, 0.14334, 0.0933377, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wml0"]
+bg_color = Color(0.843504, 0.848341, 0.240096, 1)
+
+[node name="StateBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3rtj8")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(10, 1)
+layout_mode = 0
+offset_right = 10.0
+offset_bottom = 1.0
+theme_override_styles/background = SubResource("StyleBoxFlat_pjm7j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1r4m0")
+value = 50.0
+show_percentage = false
+
+[node name="MagicBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(10, 1)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 10.0
+offset_bottom = 2.0
+theme_override_styles/background = SubResource("StyleBoxFlat_3taea")
+theme_override_styles/fill = SubResource("StyleBoxFlat_6wml0")
+value = 30.0
+show_percentage = false
