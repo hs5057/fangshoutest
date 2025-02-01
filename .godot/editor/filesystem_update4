@@ -1,0 +1,10 @@
+res://main.tscn
+res://tileset/map_tile_set.tres
+res://main.gd
+res://scenes/hero/hero_prince_man.tscn
+res://scenes/core/core.tscn
+res://scenes/map/map_01.tscn
+res://ui/state_bar.tscn
+res://scenes/enemies/enemy_bear.tscn
+res://scenes/hero/hero_prince_man.gd
+res://scenes/hero/hero.gd
