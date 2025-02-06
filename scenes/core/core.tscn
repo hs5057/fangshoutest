@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://duvwsyuxdctsb"]
+[gd_scene load_steps=6 format=3 uid="uid://duvwsyuxdctsb"]
 
+[ext_resource type="Script" path="res://scenes/core/core.gd" id="1_ubjuq"]
 [ext_resource type="Texture2D" uid="uid://crnsnun52xjkp" path="res://assets/tileset/punyworld-overworld-tileset.png" id="1_yq6ci"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t6a4k"]
@@ -15,6 +16,7 @@ radius = 90.0
 [node name="Core" type="StaticBody2D"]
 collision_layer = 8
 collision_mask = 0
+script = ExtResource("1_ubjuq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
@@ -24,8 +26,11 @@ texture = SubResource("AtlasTexture_t6a4k")
 position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_mq1no")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="DetectionArea" type="Area2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(0, -9)
+collision_layer = 0
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_oui8x")
